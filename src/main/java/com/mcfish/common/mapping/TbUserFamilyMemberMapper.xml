@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mcfish.common.mapper.TbUserFamilyMemberMapper">
+  <resultMap id="BaseResultMap" type="com.mcfish.common.model.TbUserFamilyMember">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="family_id" jdbcType="INTEGER" property="familyId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="identity" jdbcType="TINYINT" property="identity" />
+    <result column="relationship" jdbcType="VARCHAR" property="relationship" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="work" jdbcType="VARCHAR" property="work" />
+    <result column="ability" jdbcType="TINYINT" property="ability" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  
+   <!-- 获取家庭成员列表-->
+  <select id="TbUserFamilyMember_selectFamilyMember" parameterType="int" 
+                     resultType="Map">
+        SELECT
+		 tm.id,
+		 tm.user_id as uid,
+		 (select name from tb_user where id = tm.user_id limit 1) as uname,
+		 (select head from tb_user where id = tm.user_id limit 1) as uhead,
+		 tm.identity,
+		 tm.relationship
+		FROM tb_user_family_member tm
+        WHERE  tm.family_id = #{id}
+  </select>
+  
+  <!-- 更新家庭成员信息 -->
+  <update id="TbUserFamilyMember_update" parameterType="Map">
+       update tb_user_family_member 
+       <set>
+	      <if test="relationship != null">
+	        relationship = #{relationship},
+	      </if>	
+	      <if test="status != null">
+	        status = #{status},
+	      </if>	       
+       </set>
+         where user_id = #{uid}
+         and  family_id = #{familyId}
+  </update>
+  
+  <!-- 批量插入成员 -->
+  <insert id="TbUserFamilyMember_bitchUser" parameterType="java.util.List">
+       insert into tb_user_family_member(family_id, user_id,identity,status)
+       values
+       <foreach collection="list" item="item" index="index" separator=",">
+           (#{item.familyId}, #{item.uid}, #{item.identity}), #{item.status})
+       </foreach>
+   </insert>
+  
+  
+</mapper>

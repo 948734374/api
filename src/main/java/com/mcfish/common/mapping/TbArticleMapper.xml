@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mcfish.common.mapper.TbArticleMapper">
+  <resultMap id="BaseResultMap" type="com.mcfish.common.model.TbArticle">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="tag" jdbcType="VARCHAR" property="tag" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="type" jdbcType="TINYINT" property="type" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="lng" jdbcType="DOUBLE" property="lng" />
+    <result column="lat" jdbcType="DOUBLE" property="lat" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  
+   <!-- 获取指定帖子 -->
+  <select id="TbArticle_selectArticleById" parameterType="int" resultType="Map">
+        SELECT
+        	ta.*,
+			tu.name,
+			tu.head
+        FROM tb_article ta
+        LEFT JOIN tb_article_main tam ON tam.`article_id` = ta.`id`
+        LEFT JOIN tb_user tu ON tu.id = tam.`user_id`
+        WHERE ta.id=#{id}
+  </select>
+  
+  <!-- 查询主页显示的文章列表 -->
+  <select id="TbArticle_selectCanViewArticle" parameterType="int" resultType="Map">
+	SELECT
+		ta.*,
+		tu.name,
+		tu.head
+	FROM
+		tb_article ta
+		LEFT JOIN tb_article_main tam
+		ON tam.article_id = ta.id
+		LEFT JOIN tb_user tu
+		ON tu.id = tam.user_id
+		LEFT JOIN tb_article_auth taa
+		ON ta.id = taa.article_id
+	WHERE
+		taa.`range` = 0
+		OR tam.user_id = #{uid}
+		OR IF(
+				taa.`range` = 2,
+				(
+					SELECT count(*)
+					FROM tb_article_auth_range taar
+					WHERE taar.auth_id = taa.id AND user_id = #{uid}
+				),
+				0
+			)
+  </select>
+  
+  <!-- 搜索可查看的文章 -->
+  <select id="TbArticle_selectCanViewArticleByKeyWord" parameterType="Map" resultType="Map">
+	SELECT
+		ta.*,
+		tu.name,
+		tu.head
+	FROM
+		tb_article ta
+		LEFT JOIN tb_article_main tam
+		ON tam.article_id = ta.id
+		LEFT JOIN tb_user tu
+		ON tu.id = tam.user_id
+		LEFT JOIN tb_article_auth taa
+		ON ta.id = taa.article_id
+	WHERE
+		(
+		taa.`range` = 0
+		OR tam.user_id = #{uid}
+		OR
+		IF(
+			taa.`range` = 2,
+			(
+				SELECT count(*)
+				FROM tb_article_auth_range taar
+				WHERE taar.auth_id = taa.id AND user_id = #{uid}
+			),
+			0
+			)
+		)
+		<if test="keyword != null and keyword != ''">
+		AND
+		(
+			ta.title like "%"#{keyword}"%"
+			OR
+			ta.tag like "%"#{keyword}"%"
+			OR
+			ta.content like "%"#{keyword}"%"
+			OR
+			tu.name like "%"#{keyword}"%"
+		)
+		</if>
+  </select>
+  
+  <!-- 获取用户帖子列表 -->
+  <select id="TbArticle_selectArticles" parameterType="int" resultType="map">
+    SELECT
+	    ta.title,
+	    ta.content,
+	    ta.id
+    FROM
+	    tb_article AS ta
+        LEFT JOIN tb_article_main AS tm ON ta.id = tm.article_id
+    WHERE
+	   tm.user_id = #{id}
+  </select>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mcfish.common.mapper.TbUserCollectionFamilyMapper">
+  <resultMap id="BaseResultMap" type="com.mcfish.common.model.TbUserCollectionFamily">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="family_id" jdbcType="INTEGER" property="familyId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+    
+  <!-- 获取用户收藏的家庭列表 -->
+  <select id="TbUserCollectionFamily_selectMyCollectionFamily" parameterType="int" 
+                                      resultType="Map"> 
+         SELECT tuf.id,
+                tuf.`name`,
+                tuf.head
+         FROM tb_user_collection_family tucf 
+         INNER JOIN tb_user_family tuf ON tucf.family_id = tuf.id
+         WHERE tucf.id =#{id}        
+  </select>
+</mapper>

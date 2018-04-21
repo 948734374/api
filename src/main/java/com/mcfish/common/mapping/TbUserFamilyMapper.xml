@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mcfish.common.mapper.TbUserFamilyMapper">
+  <resultMap id="BaseResultMap" type="com.mcfish.common.model.TbUserFamily">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="creater" jdbcType="INTEGER" property="creater" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="head" jdbcType="VARCHAR" property="head" />
+    <result column="desc" jdbcType="VARCHAR" property="desc" />
+    <result column="accpet" jdbcType="TINYINT" property="accpet" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  
+  <!-- 获取我的家庭列表 -->
+  <select id="TbUserFamily_selectMyFamily" parameterType="int" 
+                     resultType="Map">
+        SELECT
+		 tuf.id,
+		 tuf.name,
+		 tuf.head,
+		 (select count(*) from tb_user_family_member where family_id=tuf.id) as total
+		FROM tb_user_family tuf 
+		left join tb_user_family_member tufm on tuf.id = tufm.family_id
+        WHERE  tufm.user_id = #{id} and tufm.status = 0
+  </select>
+  
+  
+  <!-- 获取我的家庭详情 -->
+  <select id="TbUserFamily_selectFamilyDetail" parameterType="int" 
+                     resultType="Map">
+        SELECT
+		 tuf.id,
+		 tuf.name,
+		 tuf.head,
+		 (select count(*) from tb_user_family_member where family_id=tuf.id) as total,
+		 tuf.address,
+		 tuf.desc,
+		 tuf.accpet as isAccpet
+		FROM tb_user_family tuf 
+        WHERE  tuf.id = #{id}
+  </select>
+  
+  
+  <select id="TbUserFamily_selectFamilysRand" parameterType="Map" resultType="Map">
+  	SELECT
+  		*
+  	FROM tb_user_family
+  	ORDER BY RAND()
+  	LIMIT #{maxCount}
+  </select>
+  
+</mapper>

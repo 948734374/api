@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mcfish.common.mapper.TbArticleCommentMapper">
+  <resultMap id="BaseResultMap" type="com.mcfish.common.model.TbArticleComment">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="article_id" jdbcType="INTEGER" property="articleId" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  
+  <!-- 获取用户参与的评论 -->
+  <select id="TbArticleComment_selectMyComment" parameterType="int" 
+                                      resultType="Map"> 
+       SELECT ta.id,
+	       ta.title,
+	       ta.content,
+	       ta.id AS articleCreaterId,
+	       (SELECT tu.`name` FROM tb_user tu WHERE tu.id = tac.user_id) AS articleCreater,
+	       tac.content as comment
+	    FROM tb_article_comment tac 
+		INNER JOIN tb_article ta ON tac.article_id = ta.id
+		WHERE tac.user_id = #{uid}            
+  </select>
+  
+  
+  <select id="TbArticleComment_selectArticleComments" parameterType="int" resultType="Map">
+  	SELECT
+	  	tac.*,
+	  	tu.name,
+	  	tu.head
+  	FROM tb_article_comment tac
+	LEFT JOIN tb_user tu
+	ON tu.id = tac.user_id
+	WHERE article_id = #{articleId}
+  </select>
+  
+</mapper>

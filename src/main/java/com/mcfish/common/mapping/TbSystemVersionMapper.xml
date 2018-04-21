@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mcfish.common.mapper.TbSystemVersionMapper">
+  <resultMap id="BaseResultMap" type="com.mcfish.common.model.TbSystemVersion">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type" jdbcType="TINYINT" property="type" />
+    <result column="version" jdbcType="VARCHAR" property="version" />
+    <result column="comment" jdbcType="VARCHAR" property="comment" />
+    <result column="is_debug" jdbcType="TINYINT" property="isDebug" />
+    <result column="is_force" jdbcType="TINYINT" property="isForce" />
+    <result column="download" jdbcType="VARCHAR" property="download" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+</mapper>

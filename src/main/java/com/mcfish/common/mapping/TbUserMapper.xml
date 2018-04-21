@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mcfish.common.mapper.TbUserMapper">
+  <resultMap id="BaseResultMap" type="com.mcfish.common.model.TbUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="head" jdbcType="VARCHAR" property="head" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="openid_wx" jdbcType="VARCHAR" property="openidWx" />
+    <result column="openid_facebook" jdbcType="VARCHAR" property="openidFacebook" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="region" jdbcType="VARCHAR" property="region" />
+    <result column="gender" jdbcType="TINYINT" property="gender" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="first_language" jdbcType="VARCHAR" property="firstLanguage" />
+    <result column="second_language" jdbcType="VARCHAR" property="secondLanguage" />
+    <result column="industry" jdbcType="VARCHAR" property="industry" />
+    <result column="post" jdbcType="VARCHAR" property="post" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="religion" jdbcType="VARCHAR" property="religion" />
+    <result column="school" jdbcType="VARCHAR" property="school" />
+    <result column="word" jdbcType="VARCHAR" property="word" />
+    <result column="education_experience" jdbcType="VARCHAR" property="educationExperience" />
+    <result column="ability" jdbcType="TINYINT" property="ability" />
+    <result column="interests" jdbcType="VARCHAR" property="interests" />
+    <result column="declaration" jdbcType="VARCHAR" property="declaration" />
+    <result column="friend_verification" jdbcType="TINYINT" property="friendVerification" />
+    <result column="family_accpet" jdbcType="TINYINT" property="familyAccpet" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  
+   <!-- 用户登录 -->
+  <select id="TbUser_userlogin" parameterType="Map" resultType="com.mcfish.api.user.vo.UserVo"> 
+       select id as id,
+              code,
+              name,
+              head,
+              phone,
+              password,
+              openid_wx as openidWx,
+              openid_facebook as openidFacebook,
+              gender,
+              status
+         from tb_user
+         where 1=1 and
+         <if test="type=='1'.toString()"><!-- 账号、密码 -->
+            phone = #{account} 
+         </if>
+         <if test="type=='2'.toString()"><!-- 第三方登录 -->
+            <if test="way=='wx'.toString()"><!-- 微信 -->
+               openid_wx = #{account}
+            </if>
+            <if test="way=='facebook'.toString()"><!-- 脸书 -->
+               openid_facebook = #{account}
+            </if>
+         </if>         
+  </select>
+  
+  
+  <!-- 获取用户个人中心首页统计信息 -->
+  <select id="TbUser_selectProfile" parameterType="int" 
+                                      resultType="Map"> 
+       select tu.id,tu.name,tu.head,tu.gender, 
+         (SELECT COUNT(*) FROM tb_article ta WHERE ta.id = tu.id) AS articleTotal,   
+         (SELECT COUNT(*) FROM tb_user_friends tf WHERE tf.user_id = tu.id) AS friendTotal,  
+         (SELECT COUNT(*) FROM tb_user_fans ts WHERE ts.user_id = tu.id) AS fansTotal, 
+         (SELECT COUNT(*) FROM tb_user_family tm WHERE tm.creater = tu.id) AS familyTotal
+         from tb_user tu
+        WHERE tu.id=#{uid}            
+  </select>
+  
+  
+  <!-- 获取用户个人信息 -->
+  <select id="TbUser_selectUserInfo" parameterType="int" 
+                                      resultType="com.mcfish.api.user.vo.UserVo"> 
+       select tu.id, 
+             tu.head,
+             tu.name,
+             tu.age,
+             tu.first_language as firstLanguage,
+             tu.country,
+             tu.region,
+             tu.declaration
+         from tb_user tu
+        WHERE tu.id=#{uid}            
+  </select>
+  
+  
+  <!-- 获取其他用户信息以及和自己的关系 -->
+  <select id="TbUser_selectOtherInfo" parameterType="Map" 
+                                      resultType="com.mcfish.api.user.vo.UserVo"> 
+       select tu.id, 
+              tu.code,
+             tu.head,
+             tu.name,
+             tu.age,
+             tu.first_language as firstLanguage,
+             tu.country,
+             tu.region,
+             tu.declaration,
+             school,
+             industry,
+             post,
+             (SELECT COUNT(*) FROM tb_article ta 
+                      WHERE ta.id = tu.id) AS articleTotal,   
+             (SELECT COUNT(*) FROM tb_user_friends tf 
+                      WHERE tf.user_id = tu.id) AS friendTotal,  
+             (SELECT COUNT(*) FROM tb_user_fans ts 
+                      WHERE ts.user_id = tu.id) AS fansTotal, 
+             (SELECT COUNT(*) FROM tb_user_family tm 
+                      WHERE tm.creater = tu.id) AS familyTotal,
+             (SELECT COUNT(*) FROM tb_user_friends tuf
+                      WHERE tuf.user_id=#{uid} AND tuf.friend_id=tu.id) AS isFriend,   
+             (SELECT COUNT(*) FROM tb_user_fans tus
+                      WHERE tus.user_id=#{uid} AND tus.fan_id=tu.id) AS isFans           
+         from tb_user tu
+        WHERE tu.id=#{otherid}            
+  </select>
+  
+  <select id="TbUser_selectUsersRand" parameterType="Map" resultType="Map">
+  	SELECT
+  		id,
+  		`name`,
+  		head,
+  		phone,
+  		age,
+  		region,
+  		gender,
+  		first_language AS firstLanguage,
+  		school,
+  		word,
+  		declaration
+  	FROM tb_user
+  	WHERE id != #{meuid}
+  	ORDER BY RAND()
+  	LIMIT #{maxCount}
+  </select>
+  
+  
+  
+  
+</mapper>

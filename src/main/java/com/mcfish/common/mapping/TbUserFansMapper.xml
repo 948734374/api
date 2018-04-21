@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mcfish.common.mapper.TbUserFansMapper">
+  <resultMap id="BaseResultMap" type="com.mcfish.common.model.TbUserFans">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="fan_id" jdbcType="INTEGER" property="fanId" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  
+  <!-- 获取用户粉丝列表 -->
+  <select id="TbUserFans_selectMyFans" parameterType="Map" 
+                                      resultType="Map"> 
+	    SELECT tuf.id,
+	       <if test="status=='1'.toString()"><!-- 我关注的 -->
+	            tuf.user_id as fid,
+		       (SELECT `name` FROM tb_user WHERE id = tuf.user_id) AS fname,
+		       (SELECT head FROM tb_user WHERE id = tuf.user_id) AS fhead 
+           </if>
+           <if test="status=='2'.toString()"><!-- 关注我的 -->
+              tuf.fan_id as fid,
+	         (SELECT `name` FROM tb_user WHERE id = tuf.fan_id) AS fname,
+	         (SELECT head FROM tb_user WHERE id = tuf.fan_id) AS fhead 
+           </if>      
+		FROM tb_user_fans tuf 
+		WHERE 1=1
+		<if test="status=='1'.toString()"><!-- 我关注的 -->
+           and tuf.fan_id = #{uid}  
+         </if>
+         <if test="status=='2'.toString()"><!-- 关注我的 -->
+            and tuf.user_id = #{uid}   
+         </if>        
+  </select>
+  
+</mapper>

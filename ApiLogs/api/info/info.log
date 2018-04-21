@@ -1,0 +1,142 @@
+2018-04-20 09:42:59,307 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 09:43:08,400 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 09:43:08,408 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@525bb42
+2018-04-20 09:43:08,538 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 09:43:11,668 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 09:43:11,670 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 14.138 seconds (JVM running for 14.907)
+2018-04-20 09:50:20,826 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 09:50:29,684 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 09:50:29,691 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3c866f08
+2018-04-20 09:50:29,804 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 09:50:32,250 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 09:50:32,253 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 12.871 seconds (JVM running for 13.617)
+2018-04-20 09:56:36,820 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 09:56:45,233 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 09:56:45,240 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3313ba00
+2018-04-20 09:56:45,353 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 09:56:48,012 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 09:56:48,014 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 12.4 seconds (JVM running for 13.117)
+2018-04-20 10:00:00,002 -- INFO  -- com.mcfish.api.task.Task.getWxAccessToken(Task.java:39) -- --------获取微信access_token开始----------
+2018-04-20 10:00:02,344 -- INFO  -- com.mcfish.api.task.Task.getWxAccessToken(Task.java:57) -- --------获取微信access_token成功----------null
+2018-04-20 10:03:04,348 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 10:03:12,916 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 10:03:12,923 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6b7d7884
+2018-04-20 10:03:13,050 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 10:03:15,495 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 10:03:15,497 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 12.759 seconds (JVM running for 13.502)
+2018-04-20 10:04:42,383 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-1} inited
+2018-04-20 10:57:26,855 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 10:57:34,901 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 10:57:34,910 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2c28b95e
+2018-04-20 10:57:35,039 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 10:57:37,166 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 10:57:37,170 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 11.522 seconds (JVM running for 12.229)
+2018-04-20 11:07:05,573 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-1} inited
+2018-04-20 11:20:43,407 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 11:20:59,563 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:20:59,570 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6ab551ce
+2018-04-20 11:20:59,719 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:21:02,813 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 11:21:02,815 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 20.801 seconds (JVM running for 21.678)
+2018-04-20 11:23:20,833 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-1} inited
+2018-04-20 11:28:34,436 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:28:34,454 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1383) -- {dataSource-1} closed
+2018-04-20 11:28:35,034 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 11:28:40,397 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:28:41,776 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 11:28:41,777 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 7.085 seconds (JVM running for 480.64)
+2018-04-20 11:28:52,631 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-2} inited
+2018-04-20 11:29:27,098 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 11:29:34,887 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:29:34,893 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@220266f8
+2018-04-20 11:29:35,009 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:29:37,248 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 11:29:37,250 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 11.377 seconds (JVM running for 12.091)
+2018-04-20 11:30:02,514 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-1} inited
+2018-04-20 11:33:16,059 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 11:33:24,238 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:33:24,245 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@67f89d19
+2018-04-20 11:33:24,401 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:33:26,600 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 11:33:26,602 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 11.764 seconds (JVM running for 12.507)
+2018-04-20 11:33:28,763 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-1} inited
+2018-04-20 11:37:31,681 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 11:37:41,493 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:37:41,501 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@594ccce5
+2018-04-20 11:37:41,660 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:37:45,009 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 11:37:45,013 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 14.793 seconds (JVM running for 15.665)
+2018-04-20 11:38:07,178 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-1} inited
+2018-04-20 11:51:05,130 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:51:05,146 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1383) -- {dataSource-1} closed
+2018-04-20 11:51:05,826 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 11:51:11,377 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 11:51:12,740 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 11:51:12,741 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 7.278 seconds (JVM running for 823.393)
+2018-04-20 11:51:17,417 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-2} inited
+2018-04-20 12:00:00,000 -- INFO  -- com.mcfish.api.task.Task.getWxAccessToken(Task.java:39) -- --------获取微信access_token开始----------
+2018-04-20 12:00:02,245 -- INFO  -- com.mcfish.api.task.Task.getWxAccessToken(Task.java:57) -- --------获取微信access_token成功----------null
+2018-04-20 14:00:00,002 -- INFO  -- com.mcfish.api.task.Task.getWxAccessToken(Task.java:39) -- --------获取微信access_token开始----------
+2018-04-20 14:00:01,898 -- INFO  -- com.mcfish.api.task.Task.getWxAccessToken(Task.java:57) -- --------获取微信access_token成功----------null
+2018-04-20 14:12:53,180 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1383) -- {dataSource-2} closed
+2018-04-20 14:12:53,905 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 14:13:00,044 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 14:13:01,407 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 14:13:01,408 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 7.861 seconds (JVM running for 9332.06)
+2018-04-20 14:13:12,388 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 14:13:20,554 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 14:13:20,561 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@45cd3201
+2018-04-20 14:13:20,676 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 14:13:22,837 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 14:13:22,839 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 11.726 seconds (JVM running for 12.44)
+2018-04-20 14:13:25,589 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-1} inited
+2018-04-20 15:20:38,611 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:20:38,624 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1383) -- {dataSource-1} closed
+2018-04-20 15:20:39,328 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 15:20:54,428 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 15:21:02,977 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:21:02,986 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@9f5bbc3
+2018-04-20 15:21:03,109 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:21:05,409 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 15:21:05,411 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 12.289 seconds (JVM running for 13.046)
+2018-04-20 15:21:25,819 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-1} inited
+2018-04-20 15:28:10,792 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:28:10,806 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1383) -- {dataSource-1} closed
+2018-04-20 15:28:11,444 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 15:28:16,037 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:28:17,150 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 15:28:17,151 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 6.016 seconds (JVM running for 444.786)
+2018-04-20 15:28:19,041 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-2} inited
+2018-04-20 15:34:17,118 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1383) -- {dataSource-2} closed
+2018-04-20 15:34:17,761 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 15:34:21,572 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:34:22,348 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 15:34:22,349 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 4.872 seconds (JVM running for 809.985)
+2018-04-20 15:34:30,166 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-3} inited
+2018-04-20 15:34:45,978 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 15:34:54,594 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:34:54,604 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@307a816c
+2018-04-20 15:34:54,727 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:34:56,992 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 15:34:56,994 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 12.488 seconds (JVM running for 13.254)
+2018-04-20 15:35:01,050 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-1} inited
+2018-04-20 15:35:41,905 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:35:41,965 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1383) -- {dataSource-1} closed
+2018-04-20 15:35:42,624 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 15:35:46,881 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:35:47,921 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 15:35:47,922 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 5.628 seconds (JVM running for 64.183)
+2018-04-20 15:35:49,339 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-2} inited
+2018-04-20 15:55:01,058 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1383) -- {dataSource-2} closed
+2018-04-20 15:55:01,691 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 15:55:14,018 -- INFO  -- org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) -- No active profile set, falling back to default profiles: default
+2018-04-20 15:55:22,752 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:55:22,759 -- INFO  -- com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) -- DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@176b85aa
+2018-04-20 15:55:22,932 -- INFO  -- com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) -- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-04-20 15:55:25,258 -- INFO  -- com.mcfish.Application.run(Application.java:47) -- 服务启动完成!
+2018-04-20 15:55:25,260 -- INFO  -- org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) -- Started Application in 12.623 seconds (JVM running for 13.38)
+2018-04-20 15:55:27,337 -- INFO  -- com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:667) -- {dataSource-1} inited
+2018-04-20 16:00:00,002 -- INFO  -- com.mcfish.api.task.Task.getWxAccessToken(Task.java:39) -- --------获取微信access_token开始----------
+2018-04-20 16:00:02,255 -- INFO  -- com.mcfish.api.task.Task.getWxAccessToken(Task.java:57) -- --------获取微信access_token成功----------null
+2018-04-20 18:00:00,002 -- INFO  -- com.mcfish.api.task.Task.getWxAccessToken(Task.java:39) -- --------获取微信access_token开始----------
+2018-04-20 18:00:02,452 -- INFO  -- com.mcfish.api.task.Task.getWxAccessToken(Task.java:57) -- --------获取微信access_token成功----------null

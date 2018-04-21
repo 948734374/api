@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mcfish.common.mapper.TbUserCollectionArticleMapper">
+  <resultMap id="BaseResultMap" type="com.mcfish.common.model.TbUserCollectionArticle">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="collection_id" jdbcType="INTEGER" property="collectionId" />
+    <result column="article_id" jdbcType="INTEGER" property="articleId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  
+  <!-- 获取用户收藏的帖子列表 -->
+  <select id="TbUserCollectionArticle_selectMyCollectionArticle" parameterType="int" 
+                                      resultType="Map"> 
+         SELECT tuca.id,
+                ta.id AS articleId,
+                ta.content,
+                tuca.collection_id AS collectionId 
+         FROM tb_user_collection_article tuca 
+         INNER JOIN tb_article ta ON tuca.article_id=ta.id
+         WHERE tuca.user_id =#{uid}          
+  </select>
+  
+  
+</mapper>
